@@ -1,18 +1,3 @@
-// Dropdown of cities
-window.alert = function () {};
-
-$(".dropdown-radio")
-  .find("input")
-  .change(function () {
-    var dropdown = $(this).closest(".dropdown");
-    var radioname = $(this).attr("name");
-    var checked = "input[name=" + radioname + "]:checked";
-
-    //update the text
-    var Selected_city = $(checked).closest(".dropdown-radio").text();
-    console.log(Selected_city);
-    dropdown.find("button").text(Selected_city);
-  });
 
 var jsonData = [{ meta: { version: 1, type: "test" } }];
 
@@ -46,3 +31,13 @@ plsdo("delhi");
 plsdo("pune");
 plsdo("kolkata");
 plsdo("mumbai");
+
+// window.alert = function () {};
+$('#myAnswers > div').hide();
+
+$(function () {
+  $('#QuestionOptions').change(function () {
+      $('#myAnswers > div').hide();
+      $('#myAnswers').find('#' + $(this).val()).fadeIn('slow');
+  });
+});
