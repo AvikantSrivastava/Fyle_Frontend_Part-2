@@ -1,4 +1,3 @@
-
 var jsonData = [{ meta: { version: 1, type: "test" } }];
 
 jQuery.ajaxSetup({ cache: true });
@@ -22,9 +21,16 @@ function plsdo(city) {
           { data: "state" },
         ],
       });
+
+      $("#loader").hide();
+      $("#myAnswers").fadeIn("slow");
+
     }
   );
 }
+
+$("#loader").fadeIn('slow');
+$("#myAnswers").hide();
 
 plsdo("bangalore");
 plsdo("delhi");
@@ -33,11 +39,14 @@ plsdo("kolkata");
 plsdo("mumbai");
 
 // window.alert = function () {};
-$('#myAnswers > div').hide();
+$("#myAnswers > div").hide();
 
 $(function () {
-  $('#QuestionOptions').change(function () {
-      $('#myAnswers > div').hide();
-      $('#myAnswers').find('#' + $(this).val()).fadeIn('slow');
+
+  $("#QuestionOptions").change(function () {
+    $("#myAnswers > div").hide();
+    $("#myAnswers")
+      .find("#" + $(this).val())
+      .fadeIn("slow");
   });
 });
