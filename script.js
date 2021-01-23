@@ -11,7 +11,18 @@ function plsdo(city) {
 
       $(`#${city}`).DataTable({
         data: jsonData.branches,
+        stateSave: true,
         columns: [
+          {
+            data: null,
+            render: function (data, type, row) {
+              if (type === "display") {
+                return '<input type="checkbox" class="editor-active">';
+              }
+              return data;
+            },
+            className: "dt-body-center",
+          },
           { data: "ifsc" },
           { data: "bank_id" },
           { data: "branch" },
@@ -20,6 +31,10 @@ function plsdo(city) {
           { data: "district" },
           { data: "state" },
         ],
+
+        stateLoadParams: function (settings, data) {
+          data.checkboxes = {};
+        },
       });
 
       $("#loader").hide();
