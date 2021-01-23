@@ -24,12 +24,11 @@ function plsdo(city) {
 
       $("#loader").hide();
       $("#myAnswers").fadeIn("slow");
-
     }
   );
 }
 
-$("#loader").fadeIn('slow');
+$("#loader").fadeIn("slow");
 $("#myAnswers").hide();
 
 plsdo("bangalore");
@@ -42,7 +41,6 @@ plsdo("mumbai");
 $("#myAnswers > div").hide();
 
 $(function () {
-
   $("#QuestionOptions").change(function () {
     $("#myAnswers > div").hide();
     $("#myAnswers")

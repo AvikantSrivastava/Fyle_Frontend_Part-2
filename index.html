@@ -15,24 +15,30 @@
 
     <div class="container">
 
-        <div class="row row-grid">
-            <div class="col-md-4">
-                <h1>Bank Branches</h1>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Bank Branches</h1>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div id="myQuestions" class="select-options">
+                            <select id="QuestionOptions" class="form-control">
+                                <option class="default-label" value="_bangalore" disabled selected>Select City</option>
+                                <option value="_bangalore">Bangalore</option>
+                                <option value="_delhi">Delhi</option>
+                                <option value="_mumbai">Mumbai</option>
+                                <option value="_kolkata">Kolkata</option>
+                                <option value="_pune">Pune</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="col-md-8">
-                <div id="myQuestions" class="select-options col-xs-5">
-                    <select id="QuestionOptions" class="form-control">
-                        <option class="default-label" value="_bangalore" disabled selected>Select City</option>
-                        <option value="_bangalore">Bangalore</option>
-                        <option value="_delhi">Delhi</option>
-                        <option value="_mumbai">Mumbai</option>
-                        <option value="_kolkata">Kolkata</option>
-                        <option value="_pune">Pune</option>
-                    </select>
-                </div>
-            </div>
-            
 
         </div>
 
@@ -49,6 +55,7 @@
             <div id="_bangalore">
                 <table id="bangalore" class="display" width="100%">
                     <thead>
+                        <th>Fav</th>
                         <th>IFSC</th>
                         <th>Bank ID</th>
                         <th>Branch</th>
